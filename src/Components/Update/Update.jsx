@@ -3,7 +3,7 @@ import Swal from 'sweetalert2'
 const Update = () => {
     const data = useLoaderData();
     const { id } = useParams();
-    const filter = data.filter(product => product._id == id);
+    const filter = data.find(product => product._id == id);
 
     const { name, image, description, price, rating, type, branName } = filter
     console.log(filter);
@@ -20,31 +20,31 @@ const Update = () => {
         const value = { name, image, type, price, branName, rating, description, }
         console.log(value)
 
-        // fetch('http://localhost:5000/product', {
-        //     method: 'PUT',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(value)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         if (data.insertedId) {
-        //             Swal.fire(
-        //                 'Product add successful',
-        //                 'You clicked the button!',
-        //                 'success'
-        //             )
-        //             // form.reset();
-        //         }
-        //         console.log(data);
-        //     })
+        fetch(`http://localhost:5000/product/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(value)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    Swal.fire(
+                        'Product Update successful',
+                        'You clicked the button!',
+                        'success'
+                    )
+
+                }
+                console.log(data);
+            })
 
     }
     return (
         <div>
             <form onSubmit={handelForm} className="bg-stone-300 p-20">
-                <h1 className="text-center mb-6 font-bold text-3xl">You can Add Product Hear</h1>
+                <h1 className="text-center mb-6 font-bold text-3xl">Update your Product </h1>
 
                 <div className=" md:flex justify-center gap-8 ">
                     <div >
@@ -123,7 +123,7 @@ const Update = () => {
                     </fieldset>
                 </div>
                 <div className="flex justify-center pt-10">
-                    <input type="submit" value="Add Product " className="btn bg-yellow-500 text-white md:w-[550px] lg:w-[835px] border-none" />
+                    <input type="submit" value="Update Product " className="btn bg-yellow-500 text-white md:w-[550px] lg:w-[835px] border-none" />
                 </div>
             </form>
         </div>
