@@ -1,27 +1,27 @@
 [
     {
         "_id": 1,
-        "name": "Apple",
+        "name": "apple",
         "image_url": "https://i.ibb.co/ggVq1Df/Apple-Logo.png"
     },
     {
         "_id": 2,
-        "name": "Samsung",
+        "name": "samsung",
         "image_url": "https://i.ibb.co/6XtFdSm/R.png"
     },
     {
         "_id": 3,
-        "name": "Google",
+        "name": "google",
         "image_url": "https://i.ibb.co/1MwwCwZ/R-1.png"
     },
     {
         "_id": 4,
-        "name": "Intel",
+        "name": "intal",
         "image_url": "https://i.ibb.co/QfnKyxp/OIP-1.jpg"
     },
     {
         "_id": 5,
-        "name": "Sony",
+        "name": "sony",
         "image_url": "https://i.ibb.co/DksMR3b/R-2.png"
     },
     {
