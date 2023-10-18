@@ -2,21 +2,9 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
-        <div className="lg:flex">
-            <div className="lg:w-1/4">
-                <h1 className="bg-yellow-500 p-5 font-bold text-center text-white">ALL CATEGORIES</h1>
-                <div className="list-none p-5 font-semibold ">
-                    <li className="p-2"> <Link>Apple</Link></li>
-                    <li className="p-2"> <Link>Samsung</Link></li>
-                    <li className="p-2"> <Link>Google</Link></li>
-                    <li className="p-2"> <Link>Sony</Link></li>
-                    <li className="p-2"> <Link>Intel</Link></li>
+        <div className="">
 
-
-
-                </div>
-            </div>
-            <div className="hero lg:w-3/4 h-[500px]" style={{ backgroundImage: 'url(https://i.ibb.co/G3mPyd0/laughing-man-using-smarpthone-street.jpg)' }}>
+            <div className="hero  h-[500px]" style={{ backgroundImage: 'url(https://i.ibb.co/G3mPyd0/laughing-man-using-smarpthone-street.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content  text-neutral-content">
                     <div data-aos="fade-up-right" className="max-w-md">

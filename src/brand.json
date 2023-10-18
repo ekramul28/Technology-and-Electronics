@@ -1,0 +1,32 @@
+[
+    {
+        "_id": 1,
+        "name": "Apple",
+        "image_url": "https://i.ibb.co/ggVq1Df/Apple-Logo.png"
+    },
+    {
+        "_id": 2,
+        "name": "Samsung",
+        "image_url": "https://i.ibb.co/6XtFdSm/R.png"
+    },
+    {
+        "_id": 3,
+        "name": "Google",
+        "image_url": "https://i.ibb.co/1MwwCwZ/R-1.png"
+    },
+    {
+        "_id": 4,
+        "name": "Intel",
+        "image_url": "https://i.ibb.co/QfnKyxp/OIP-1.jpg"
+    },
+    {
+        "_id": 5,
+        "name": "Sony",
+        "image_url": "https://i.ibb.co/DksMR3b/R-2.png"
+    },
+    {
+        "_id": 6,
+        "name": "realme",
+        "image_url": "https://i.ibb.co/N1kQWDs/OIP-3.jpg"
+    }
+]
