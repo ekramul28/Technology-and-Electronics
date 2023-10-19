@@ -9,6 +9,7 @@ const Root = () => {
             <NavBer></NavBer>
             <Outlet></Outlet>
             <Footer></Footer>
+
         </div>
     );
 };

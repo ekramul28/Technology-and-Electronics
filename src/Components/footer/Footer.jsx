@@ -10,7 +10,7 @@ const Footer = () => {
 
 
                 </div>
-                <nav className="grid grid-flow-col gap-4 list-none">
+                <nav className=" md:grid md:grid-flow-col gap-4 list-none  ">
                     <li className="font-semibold text-lg"><NavLink to="/">Home</NavLink></li>
                     <li className="font-semibold text-lg"><NavLink to="/addProduct">Add Product</NavLink></li>
                     <li className="font-semibold text-lg"><NavLink to="/myCart">My Cart</NavLink></li>

@@ -20,7 +20,7 @@ const Update = () => {
         const value = { name, image, type, price, branName, rating, description, }
         console.log(value)
 
-        fetch(`http://localhost:5000/product/${id}`, {
+        fetch(`https://technology-and-electronics-server-lfdm53ol5.vercel.app/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
