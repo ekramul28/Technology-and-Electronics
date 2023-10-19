@@ -1,19 +1,19 @@
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+
 import Swal from "sweetalert2";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Register = () => {
-    const { CreateUserWithEmailAndPassword } = useContext(AuthContext);
-    const [registerError, setRegisterError] = useState('');
-    // const [register, setRegister] = useState('');
+    const { register } = useContext(AuthContext)
+    const [registerError, setRegisterError] = useState('')
     const handelForm = e => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        const name = form.name.value;
-        const imgUrl = form.imgUrl.value;
+        const displayName = form.name.value;
+        const photoURL = form.imgUrl.value;
 
         if (password.length < 6) {
             Swal.fire('Password must be at least 6 characters');
@@ -30,15 +30,15 @@ const Register = () => {
             Swal.fire('Password must be a number ')
             return;
         }
-        setRegisterError('');
-        CreateUserWithEmailAndPassword(name, password, email, imgUrl)
-            .then(result => {
+        register(email, password, displayName, photoURL)
+            .then((result) => {
                 console.log(result.user);
-                Swal.fire('Register Successful')
+                Swal.fire('register successful ')
             })
-            .catch(error => {
+            .catch((error => {
                 setRegisterError(error.message);
-            });
+            }))
+
 
     }
     return (
@@ -83,7 +83,7 @@ const Register = () => {
                                     <p> Account <Link to="/login" className="text-yellow-500 text-2xl">login</Link></p>
                                 </div>
                                 <div className="text-center">
-                                    <h1 className="text-red-500 p-4">{registerError}</h1>
+                                    <h1 className="text-red-500">{registerError}</h1>
                                 </div>
                             </div>
                         </form>

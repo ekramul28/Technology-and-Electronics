@@ -1,13 +1,39 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { FcGoogle } from 'react-icons/fc';
+import Swal from "sweetalert2";
 const Login = () => {
+    const { login, logInWithGoogle } = useContext(AuthContext);
+    const [error, setError] = useState('');
+
     const handelForm = e => {
         e.preventDefault();
         const form = e.target;
-        const name = form.email.value;
+        const email = form.email.value;
         const password = form.password.value;
-        console.log(name, password);
+        console.log(email, password);
+        setError('')
+        login(email, password)
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
     }
+
+    const googleClick = () => {
+        logInWithGoogle()
+            .then(result => {
+                console.log(result.user);
+                Swal.fire('Login Successful')
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -37,8 +63,15 @@ const Login = () => {
                                 <div className="mt-3">
                                     <p>No Account <Link to="/register" className="text-yellow-500 text-2xl">Register</Link></p>
                                 </div>
+                                <div className="text-center">
+                                    <h1 className="text-red-500">{error}</h1>
+                                </div>
                             </div>
                         </form>
+
+                    </div>
+                    <div onClick={googleClick} className=" border-2 border-black p-4 rounded-xl mt-5">
+                        <p className="flex justify-center items-center gap-3 text-xl font-semibold"><FcGoogle /> Continue With Google</p>
                     </div>
                 </div>
             </div>

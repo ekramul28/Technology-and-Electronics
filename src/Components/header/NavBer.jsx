@@ -1,6 +1,22 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const NavBer = () => {
+    const { user, Logout } = useContext(AuthContext);
+
+    const handelButton = () => {
+        Logout()
+            .then(result => {
+                console.log(result);
+                Swal.fire('Logout succesfull');
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
     const link = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/addProduct">Add Product</NavLink></li>
@@ -31,7 +47,10 @@ const NavBer = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {
+                        user ? <button onClick={handelButton} className="btn">LogOut</button> : <Link to="/login" className="btn">Login</Link>
+                    }
+
                 </div>
             </div>
         </div>
