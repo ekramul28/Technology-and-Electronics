@@ -24,7 +24,7 @@ const BrandProduct = ({ brandProduct }) => {
                     </p>
                     <p>{description}</p>
                     <div className=" flex gap-2">
-                        <button className="btn bg-yellow-500 border-none text-white">Details </button>
+                        <Link to={`/details/${_id}`}><button className="btn bg-yellow-500 border-none text-white">Details </button> </Link>
                         <Link to={`/update/${_id}`}><button className="btn bg-yellow-500 border-none text-white">Update </button> </Link>
                     </div>
                 </div>

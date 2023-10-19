@@ -47,6 +47,16 @@ const NavBer = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                    <div className=" md:block ">
+                        {
+                            user && <p>{user?.email.slice(0, 10)}</p>
+                        }
+                    </div>
+
+                    {
+                        user && <img className="w-14 h-14 mx-1 rounded-full" src={user?.photoURL} alt="" />
+
+                    }
                     {
                         user ? <button onClick={handelButton} className="btn">LogOut</button> : <Link to="/login" className="btn">Login</Link>
                     }

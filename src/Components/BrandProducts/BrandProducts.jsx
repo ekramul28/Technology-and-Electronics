@@ -41,17 +41,13 @@ const BrandProducts = () => {
             </div>
             <div >
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-3 w-3/4 ">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3  ">
                     {
                         brandProducts?.map(brandProduct => <BrandProduct key={brandProduct._id} brandProduct={brandProduct}></BrandProduct>)
 
                     }
                 </div>
-                {
-                    <div className="w-1/4">
-                        ok
-                    </div>
-                }
+
             </div>
         </div>
     );

@@ -6,10 +6,14 @@ import Login from "../Components/Login/Login";
 import BrandProduct from "../Components/BrandProducts/BrandProducts";
 import Update from "../Components/Update/Update";
 import Register from "../Components/Register/Register";
+import NoPage from "../Components/404 pag/Nopage";
+import ProtectRout from "../Components/ProtactRout/ProtactRout";
+import Details from "../Components/Details/Details";
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement: <NoPage></NoPage>,
         children: [
             {
                 path: "/",
@@ -17,7 +21,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addProduct",
-                element: <AddProduct></AddProduct>
+                element: <ProtectRout><AddProduct></AddProduct></ProtectRout>
             },
             {
                 path: "/login",
@@ -34,7 +38,13 @@ const router = createBrowserRouter([
             },
             {
                 path: '/update/:id',
-                element: <Update></Update>,
+                element: <ProtectRout><Update></Update></ProtectRout>,
+                loader: () => fetch("http://localhost:5000/product")
+
+            },
+            {
+                path: '/details/:id',
+                element: <ProtectRout><Details></Details></ProtectRout>,
                 loader: () => fetch("http://localhost:5000/product")
 
             }
