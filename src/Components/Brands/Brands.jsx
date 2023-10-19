@@ -12,10 +12,14 @@ const Brands = () => {
     }, [])
     console.log(brands);
     return (
-        <div className="grid md:grid-cols-2 gap-4 my-8 lg:grid-cols-3">
-            {
-                brands?.map(brand => <Brand key={brand._id} brands={brand}></Brand>)
-            }
+        <div className="my-20">
+            <h1 className="text-3xl text-center font-extrabold">All Brand</h1>
+            <div className="grid md:grid-cols-2 gap-4 my-8 lg:grid-cols-3">
+                {
+                    brands?.map(brand => <Brand key={brand._id} brands={brand}></Brand>)
+                }
+            </div>
+
         </div>
     );
 };

@@ -36,10 +36,10 @@ const Login = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-gray-600">
                 <div className="hero-content flex-col ">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                        <h1 className="text-5xl font-bold text-white">Login now!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full   shadow-2xl bg-base-100">
                         <form onSubmit={handelForm} className="card-body md:w-[400px]  lg:w-[500px]">
@@ -59,7 +59,7 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn  text-white bg-yellow-500 border-none">Login</button>
                                 <div className="mt-3">
                                     <p>No Account <Link to="/register" className="text-yellow-500 text-2xl">Register</Link></p>
                                 </div>
@@ -70,8 +70,8 @@ const Login = () => {
                         </form>
 
                     </div>
-                    <div onClick={googleClick} className=" border-2 border-black p-4 rounded-xl mt-5">
-                        <p className="flex justify-center items-center gap-3 text-xl font-semibold"><FcGoogle /> Continue With Google</p>
+                    <div onClick={googleClick} className=" border-2 border-white p-4 rounded-xl mt-5">
+                        <p className="flex justify-center items-center gap-3 text-xl font-semibold text-white"><FcGoogle /> Continue With Google</p>
                     </div>
                 </div>
             </div>

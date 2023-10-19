@@ -18,11 +18,11 @@ const NavBer = () => {
     }
 
     const link = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/addProduct">Add Product</NavLink></li>
-        <li><NavLink to="/myCart">My Cart</NavLink></li>
-        <li><NavLink to="/login">Login</NavLink></li>
-        <li><NavLink to="/register">Register</NavLink></li>
+        <li className="font-semibold text-lg"><NavLink to="/">Home</NavLink></li>
+        <li className="font-semibold text-lg"><NavLink to="/addProduct">Add Product</NavLink></li>
+        <li className="font-semibold text-lg"><NavLink to="/myCart">My Cart</NavLink></li>
+        <li className="font-semibold text-lg"><NavLink to="/login">Login</NavLink></li>
+        <li className="font-semibold text-lg"><NavLink to="/register" >Register</NavLink></li>
     </>
     return (
         <div>
@@ -36,8 +36,10 @@ const NavBer = () => {
                             {link}
                         </ul>
                     </div>
-                    <div className="flex items-center">
-                        <img className="w-20 h-20 rounded-full" src="logo.png" alt="" />
+                    <div className="flex items-center gap-2">
+                        <img className="w-20 h-20 rounded-full" src="https://i.ibb.co/5M3J5yD/R-4.png" alt="" />
+                        <h1 className="text-2xl font-semibold text-yellow-700">Random</h1>
+
 
                     </div>
                 </div>
@@ -47,7 +49,7 @@ const NavBer = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <div className=" md:block ">
+                    <div className="hidden md:block ">
                         {
                             user && <p>{user?.email.slice(0, 10)}</p>
                         }

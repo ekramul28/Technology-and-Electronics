@@ -43,13 +43,13 @@ const Register = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-100 my-16">
                 <div className="hero-content flex-col ">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Register now!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full   shadow-2xl bg-base-100">
-                        <form onSubmit={handelForm} className="card-body md:w-[400px]  lg:w-[500px]">
+                        <form onSubmit={handelForm} className="card-body md:w-[400px]  lg:w-[600px]">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -78,9 +78,9 @@ const Register = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Register</button>
+                                <button className="btn bg-yellow-500 border-none text-white">Register</button>
                                 <div className="mt-3">
-                                    <p> Account <Link to="/login" className="text-yellow-500 text-2xl">login</Link></p>
+                                    <p className="text-xl">you have Account  please<Link to="/login" className="text-yellow-500 text-2xl ml-3">login</Link></p>
                                 </div>
                                 <div className="text-center">
                                     <h1 className="text-red-500">{registerError}</h1>

@@ -36,8 +36,8 @@ const AddProduct = () => {
     }
     return (
         <div>
-            <form onSubmit={handelForm} className="bg-stone-300 p-20">
-                <h1 className="text-center mb-6 font-bold text-3xl">You can Add Product Hear</h1>
+            <form onSubmit={handelForm} className="bg-slate-300 p-20">
+                <h1 className="text-center mb-6 font-bold text-3xl">You can <span className='text-yellow-500'>Add Product</span> Hear</h1>
 
                 <div className=" md:flex justify-center gap-8 ">
                     <div >

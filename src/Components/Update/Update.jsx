@@ -43,10 +43,10 @@ const Update = () => {
     }
     return (
         <div>
-            <form onSubmit={handelForm} className="bg-stone-300 p-20">
+            <form onSubmit={handelForm} className=" p-20 bg-slate-100">
                 <h1 className="text-center mb-6 font-bold text-3xl">Update your Product </h1>
 
-                <div className=" md:flex justify-center gap-8 ">
+                <div className=" md:flex justify-center gap-8  ">
                     <div >
                         <div >
                             <fieldset className="form-control">
