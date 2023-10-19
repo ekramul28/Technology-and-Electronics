@@ -40,24 +40,24 @@ const AddProduct = () => {
                 <h1 className="text-center mb-6 font-bold text-3xl">You can <span className='text-yellow-500'>Add Product</span> Hear</h1>
 
                 <div className=" md:flex justify-center gap-8 ">
-                    <div >
+                    <div className='w-80 md:w-[300px] lg:w-[400px]'>
                         <div >
                             <fieldset className="form-control">
                                 <label className="label">
                                     <span className="label-text text-xl">Enter your Product Name</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="name" placeholder="Name" className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="name" placeholder="Name" className="input input-bordered w-60 pr-16" />
                                 </div>
                             </fieldset>
                         </div>
                         <div >
                             <fieldset className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-xl">Enter your Product Image</span>
+                                <label className="label ">
+                                    <span className=" text-xl">Enter your Product Image</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="image" placeholder="Image" className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="image" placeholder="Image" className="input input-bordered w-60 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -67,7 +67,7 @@ const AddProduct = () => {
                                     <span className="label-text text-xl">Enter your Product Type</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="type" placeholder="Type" className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="type" placeholder="Type" className="input input-bordered w-60 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -79,7 +79,7 @@ const AddProduct = () => {
                                     <span className="label-text text-xl">Enter your Product Price</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="price" placeholder="Price" className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="price" placeholder="Price" className="input input-bordered w-60 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -89,7 +89,7 @@ const AddProduct = () => {
                                     <span className="label-text text-xl">Enter your Brand Name</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="branName" placeholder="Brand Name" className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="branName" placeholder="Brand Name" className="input input-bordered w-60 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -99,7 +99,7 @@ const AddProduct = () => {
                                     <span className="label-text text-xl">Enter your Product Rating</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="rating" placeholder="Rating" className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="rating" placeholder="Rating" className="input input-bordered w-60 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -111,7 +111,7 @@ const AddProduct = () => {
                             <span className="label-text text-xl">Enter your Product Short description</span>
                         </label>
                         <div className="">
-                            <input type="text" name="description" placeholder="Short description" className="input input-bordered md:w-[550px] lg:w-[835px] pr-16" />
+                            <input type="text" name="description" placeholder="Short description" className="input input-bordered w-60 md:w-[550px] lg:w-[835px] pr-16" />
                         </div>
                     </fieldset>
                 </div>

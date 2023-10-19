@@ -37,7 +37,7 @@ const NavBer = () => {
                         </ul>
                     </div>
                     <div className="flex items-center gap-2">
-                        <img className="w-20 h-20 rounded-full" src="https://i.ibb.co/5M3J5yD/R-4.png" alt="" />
+                        <img className="w-10 h-10 md:w-20 md:h-20 rounded-full" src="https://i.ibb.co/5M3J5yD/R-4.png" alt="" />
                         <h1 className="text-2xl font-semibold text-yellow-700">Random</h1>
 
 
@@ -56,7 +56,7 @@ const NavBer = () => {
                     </div>
 
                     {
-                        user && <img className="w-14 h-14 mx-1 rounded-full" src={user?.photoURL} alt="" />
+                        user && <img className="w-10 h-10 md:w-14 md:h-14 mx-1 rounded-full" src={user?.photoURL} alt="" />
 
                     }
                     {
