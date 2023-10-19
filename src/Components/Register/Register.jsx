@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 
 const Register = () => {
     const { CreateUserWithEmailAndPassword } = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState('');
+    // const [register, setRegister] = useState('');
     const handelForm = e => {
         e.preventDefault();
         const form = e.target;
@@ -12,17 +14,30 @@ const Register = () => {
         const password = form.password.value;
         const name = form.name.value;
         const imgUrl = form.imgUrl.value;
-        console.log();
+
         if (password.length < 6) {
-            return Swal.fire('Password must be at least 6 characters')
+            Swal.fire('Password must be at least 6 characters');
+            return;
+        } if (!/[A-Z]/.test(password)) {
+            Swal.fire('Password must be a Uppercase letter');
+            return;
         }
+        if (!/[a-z]/.test(password)) {
+            Swal.fire('Password must be a Lowercase letter');
+            return;
+        }
+        if (!/[0-9]/.test(password)) {
+            Swal.fire('Password must be a number ')
+            return;
+        }
+        setRegisterError('');
         CreateUserWithEmailAndPassword(name, password, email, imgUrl)
             .then(result => {
                 console.log(result.user);
                 Swal.fire('Register Successful')
             })
             .catch(error => {
-                console.error(error.message);
+                setRegisterError(error.message);
             });
 
     }
@@ -66,6 +81,9 @@ const Register = () => {
                                 <button className="btn btn-primary">Register</button>
                                 <div className="mt-3">
                                     <p> Account <Link to="/login" className="text-yellow-500 text-2xl">login</Link></p>
+                                </div>
+                                <div className="text-center">
+                                    <h1 className="text-red-500 p-4">{registerError}</h1>
                                 </div>
                             </div>
                         </form>
