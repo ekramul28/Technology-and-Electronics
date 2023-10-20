@@ -8,7 +8,7 @@ const Details = () => {
     const { name, image, description, price, rating, type, branName } = find;
     const card = { name, image, description, price, rating, type, branName };
     const handelBtn = () => {
-        fetch('https://technology-and-electronics-server-k2h3vszka.vercel.app/card', {
+        fetch('https://technology-and-electronics-server-iaxlkmjhg.vercel.app/card', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

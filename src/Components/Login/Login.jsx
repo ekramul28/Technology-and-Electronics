@@ -16,7 +16,11 @@ const Login = () => {
         setError('')
         login(email, password)
             .then((result) => {
-                console.log(result);
+
+                if (result.user) {
+                    Swal.fire('Login Successful');
+                    form.reset()
+                }
             })
             .catch((error) => {
                 setError(error.message);
@@ -26,8 +30,12 @@ const Login = () => {
     const googleClick = () => {
         logInWithGoogle()
             .then(result => {
-                console.log(result.user);
-                Swal.fire('Login Successful')
+
+                if (result.user) {
+                    Swal.fire('Login Successful')
+
+                }
+
             })
             .catch(error => {
                 console.error(error)
