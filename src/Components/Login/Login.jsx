@@ -19,7 +19,7 @@ const Login = () => {
 
                 if (result.user) {
                     Swal.fire('Login Successful');
-                    form.reset()
+                    form.reset();
                 }
             })
             .catch((error) => {

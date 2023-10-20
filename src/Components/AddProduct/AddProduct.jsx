@@ -13,7 +13,7 @@ const AddProduct = () => {
         const value = { name, image, type, price, branName, rating, description, }
         console.log(value)
 
-        fetch('https://technology-and-electronics-server-iaxlkmjhg.vercel.app/product', {
+        fetch('https://technology-and-electronics-server-frfa1meiy.vercel.app/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

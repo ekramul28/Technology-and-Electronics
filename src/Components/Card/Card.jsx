@@ -15,7 +15,7 @@ const Card = ({ card, setAllCards, allCards }) => {
             confirmButtonText: 'Yes, DELETE'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://technology-and-electronics-server-iaxlkmjhg.vercel.app/card/${_id}`, {
+                fetch(`https://technology-and-electronics-server-frfa1meiy.vercel.app/card/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

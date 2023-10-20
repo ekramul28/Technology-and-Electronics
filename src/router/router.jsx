@@ -31,7 +31,7 @@ const router = createBrowserRouter([
             {
                 path: "/myCard",
                 element: <ProtectRout><MyCard></MyCard></ProtectRout>,
-                loader: () => fetch('https://technology-and-electronics-server-iaxlkmjhg.vercel.app/card')
+                loader: () => fetch('https://technology-and-electronics-server-frfa1meiy.vercel.app/card')
             },
             {
                 path: "/register",
@@ -40,18 +40,18 @@ const router = createBrowserRouter([
             {
                 path: "/product/:id",
                 element: <BrandProduct></BrandProduct>,
-                loader: ({ params }) => fetch(`https://technology-and-electronics-server-iaxlkmjhg.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://technology-and-electronics-server-frfa1meiy.vercel.app/product/${params.id}`)
             },
             {
                 path: '/update/:id',
                 element: <ProtectRout><Update></Update></ProtectRout>,
-                loader: () => fetch("https://technology-and-electronics-server-iaxlkmjhg.vercel.app/product")
+                loader: () => fetch("https://technology-and-electronics-server-frfa1meiy.vercel.app/product")
                 // https://technology-and-electronics-server-lfdm53ol5.vercel.app
             },
             {
                 path: '/details/:id',
                 element: <ProtectRout><Details></Details></ProtectRout>,
-                loader: () => fetch("https://technology-and-electronics-server-iaxlkmjhg.vercel.app/product")
+                loader: () => fetch("https://technology-and-electronics-server-frfa1meiy.vercel.app/product")
 
             }
         ]
