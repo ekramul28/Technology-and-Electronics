@@ -54,7 +54,7 @@ const Update = () => {
                                     <span className="label-text text-xl">Enter your Product Name</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="name" placeholder="Name" defaultValue={name} className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="name" placeholder="Name" defaultValue={name} className="input input-bordered w-64 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -64,7 +64,7 @@ const Update = () => {
                                     <span className="label-text text-xl">Enter your Product Image</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="image" placeholder="Image" defaultValue={image} className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="image" placeholder="Image" defaultValue={image} className="input input-bordered w-64 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -74,7 +74,7 @@ const Update = () => {
                                     <span className="label-text text-xl">Enter your Product Type</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="type" placeholder="Type" defaultValue={type} className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="type" placeholder="Type" defaultValue={type} className="input input-bordered w-64 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -86,7 +86,7 @@ const Update = () => {
                                     <span className="label-text text-xl">Enter your Product Price</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="price" placeholder="Price" defaultValue={price} className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="price" placeholder="Price" defaultValue={price} className="input input-bordered w-64 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -96,7 +96,7 @@ const Update = () => {
                                     <span className="label-text text-xl">Enter your Brand Name</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="branName" placeholder="Brand Name" defaultValue={branName} className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="branName" placeholder="Brand Name" defaultValue={branName} className="input input-bordered w-64 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -106,7 +106,7 @@ const Update = () => {
                                     <span className="label-text text-xl">Enter your Product Rating</span>
                                 </label>
                                 <div className="">
-                                    <input type="text" name="rating" defaultValue={rating} placeholder="Rating" className="input input-bordered lg:w-[400px] pr-16" />
+                                    <input type="text" name="rating" defaultValue={rating} placeholder="Rating" className="input input-bordered w-64 lg:w-[400px] pr-16" />
                                 </div>
                             </fieldset>
                         </div>
@@ -118,7 +118,7 @@ const Update = () => {
                             <span className="label-text text-xl">Enter your Product Short description</span>
                         </label>
                         <div className="">
-                            <input type="text" name="description" placeholder="Short description" defaultValue={description} className="input input-bordered md:w-[550px] lg:w-[835px] pr-16" />
+                            <input type="text" name="description" placeholder="Short description" defaultValue={description} className="input input-bordered w-64 md:w-[550px] lg:w-[835px] pr-16" />
                         </div>
                     </fieldset>
                 </div>

@@ -20,7 +20,7 @@ const NavBer = () => {
     const link = <>
         <li className="font-semibold text-lg"><NavLink to="/">Home</NavLink></li>
         <li className="font-semibold text-lg"><NavLink to="/addProduct">Add Product</NavLink></li>
-        <li className="font-semibold text-lg"><NavLink to="/myCart">My Cart</NavLink></li>
+        <li className="font-semibold text-lg"><NavLink to="/myCard">My Cart</NavLink></li>
         <li className="font-semibold text-lg"><NavLink to="/login">Login</NavLink></li>
         <li className="font-semibold text-lg"><NavLink to="/register" >Register</NavLink></li>
     </>

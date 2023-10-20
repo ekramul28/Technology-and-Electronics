@@ -9,6 +9,7 @@ import Register from "../Components/Register/Register";
 import NoPage from "../Components/404 pag/Nopage";
 import ProtectRout from "../Components/ProtactRout/ProtactRout";
 import Details from "../Components/Details/Details";
+import MyCard from "../Components/MyCard/MyCard";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -28,24 +29,29 @@ const router = createBrowserRouter([
                 element: <Login></Login>
             },
             {
+                path: "/myCard",
+                element: <ProtectRout> <MyCard></MyCard></ProtectRout>,
+                loader: () => fetch('http://localhost:5000/card')
+            },
+            {
                 path: "/register",
                 element: <Register></Register>
             },
             {
                 path: "/product/:id",
                 element: <BrandProduct></BrandProduct>,
-                loader: ({ params }) => fetch(`https://technology-and-electronics-server-lfdm53ol5.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
             },
             {
                 path: '/update/:id',
                 element: <ProtectRout><Update></Update></ProtectRout>,
-                loader: () => fetch("https://technology-and-electronics-server-lfdm53ol5.vercel.app/product")
-
+                loader: () => fetch("http://localhost:5000/product")
+                // https://technology-and-electronics-server-lfdm53ol5.vercel.app
             },
             {
                 path: '/details/:id',
                 element: <ProtectRout><Details></Details></ProtectRout>,
-                loader: () => fetch("https://technology-and-electronics-server-lfdm53ol5.vercel.app/product")
+                loader: () => fetch("http://localhost:5000/product")
 
             }
         ]

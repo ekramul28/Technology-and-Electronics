@@ -1,18 +1,38 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Details = () => {
     const data = useLoaderData();
     const { id } = useParams();
-    const find = data.find(product => product._id == id);
-    const { _id, name, image, description, price, rating, type, branName } = find;
+    const find = data?.find(product => product._id == id);
+    const { name, image, description, price, rating, type, branName } = find;
+    const card = { name, image, description, price, rating, type, branName };
     const handelBtn = () => {
-
+        fetch('http://localhost:5000/card', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(card)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire(
+                        'Product add successful',
+                        'You clicked the button!',
+                        'success'
+                    )
+                    // form.reset();
+                }
+                console.log(data);
+            })
     }
     return (
 
         <div className="md:card md:card-side bg-base-100 shadow-xl ">
             <div className="">
-                <img className=" h-[500px]" src={image} alt="" />
+                <img className=" lg:h-[500px] w-full" src={image} alt="" />
 
             </div>
             <div className="">
