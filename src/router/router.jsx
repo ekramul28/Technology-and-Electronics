@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/myCard",
-                element: <ProtectRout> <MyCard></MyCard></ProtectRout>,
+                element: <ProtectRout><MyCard></MyCard></ProtectRout>,
                 loader: () => fetch('http://localhost:5000/card')
             },
             {

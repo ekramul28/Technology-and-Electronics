@@ -7,14 +7,30 @@ const NavBer = () => {
     const { user, Logout } = useContext(AuthContext);
 
     const handelButton = () => {
-        Logout()
-            .then(result => {
-                console.log(result);
-                Swal.fire('Logout succesfull');
-            })
-            .catch(error => {
-                console.log(error);
-            })
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, LogOut'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Logout()
+                    .then(result => {
+                        console.log(result);
+                        Swal.fire('Logout succesfull');
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+            }
+        })
+
+
+
     }
 
     const link = <>

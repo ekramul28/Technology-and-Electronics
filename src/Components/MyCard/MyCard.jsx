@@ -1,8 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import Card from "../Card/Card";
+import { useState } from "react";
 
 const MyCard = () => {
+
     const cards = useLoaderData();
+    const [allCards, setAllCards] = useState(cards);
     console.log(cards);
 
     return (
@@ -11,7 +14,7 @@ const MyCard = () => {
 
             <div className="grid md:grid-cols-2 gap-2 p-3">
                 {
-                    cards?.map(card => <Card key={card._id} Card={card}></Card>)
+                    allCards?.map(card => <Card key={card._id} allCards={allCards} setAllCards={setAllCards} cards={cards} card={card}></Card>)
                 }
             </div>
         </div>

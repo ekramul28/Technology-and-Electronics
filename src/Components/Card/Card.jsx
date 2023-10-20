@@ -1,7 +1,40 @@
-import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import PropTypes from 'prop-types';
+const Card = ({ card, setAllCards, allCards }) => {
 
-const Card = ({ Card }) => {
-    const { _id, name, image, description, price, rating, type } = Card;
+    const { _id, name, image, description, price, rating, type } = card;
+    const handelDelete = (id) => {
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, DELETE'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/card/${_id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire('DELETE SUCCESSFUL');
+                            const remaing = allCards?.filter(man => man._id !== id);
+                            console.log(remaing);
+                            setAllCards(remaing);
+                        }
+                    });
+            }
+        })
+
+
+
+
+    }
     return (
         <div>
             <div className="py-5 ">
@@ -24,7 +57,7 @@ const Card = ({ Card }) => {
                         </p>
                         <p>{description}</p>
                         <div className=" flex gap-2">
-                            <button className="btn bg-yellow-500 border-none text-white">Delete </button>
+                            <button onClick={() => handelDelete(_id)} className="btn bg-yellow-500 border-none text-white">Delete </button>
                         </div>
                     </div>
                 </div>
@@ -32,5 +65,10 @@ const Card = ({ Card }) => {
         </div>
     );
 };
+Card.propTypes = {
+    card: PropTypes.object,
+    allCards: PropTypes.array,
+    setAllCards: PropTypes.object
+}
 
 export default Card;
