@@ -14,7 +14,7 @@ const Register = () => {
         const password = form.password.value;
         const displayName = form.name.value;
         const photoURL = form.imgUrl.value;
-
+        setRegisterError('')
         if (password.length < 6) {
             Swal.fire('Password must be at least 6 characters');
             return;

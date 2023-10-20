@@ -31,7 +31,7 @@ const router = createBrowserRouter([
             {
                 path: "/myCard",
                 element: <ProtectRout><MyCard></MyCard></ProtectRout>,
-                loader: () => fetch('http://localhost:5000/card')
+                loader: () => fetch('https://technology-and-electronics-server-k2h3vszka.vercel.app/card')
             },
             {
                 path: "/register",
@@ -40,18 +40,18 @@ const router = createBrowserRouter([
             {
                 path: "/product/:id",
                 element: <BrandProduct></BrandProduct>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://technology-and-electronics-server-k2h3vszka.vercel.app/product/${params.id}`)
             },
             {
                 path: '/update/:id',
                 element: <ProtectRout><Update></Update></ProtectRout>,
-                loader: () => fetch("http://localhost:5000/product")
+                loader: () => fetch("https://technology-and-electronics-server-k2h3vszka.vercel.app/product")
                 // https://technology-and-electronics-server-lfdm53ol5.vercel.app
             },
             {
                 path: '/details/:id',
                 element: <ProtectRout><Details></Details></ProtectRout>,
-                loader: () => fetch("http://localhost:5000/product")
+                loader: () => fetch("https://technology-and-electronics-server-k2h3vszka.vercel.app/product")
 
             }
         ]
