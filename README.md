@@ -1,5 +1,6 @@
 <h3>Attention</h3>
-<p>vercel is sometime not working </p>
+<p> sometime versel dosen't work </p>
+<p>please reload 3 or 4 times</p>
 
 live link :https://technology-and-electroni-526fd.web.app/
 
