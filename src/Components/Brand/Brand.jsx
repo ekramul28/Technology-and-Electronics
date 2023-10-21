@@ -5,6 +5,8 @@ const Brand = ({ brands }) => {
     return (
 
         <div>
+       
+           
             <Link to={`/product/${brands.name}`}>
                 <div>
                     <div className="card bg-base-100 hover:shadow-xl border-2 mx-2">
